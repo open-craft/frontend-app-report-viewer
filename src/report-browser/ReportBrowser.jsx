@@ -29,7 +29,7 @@ ReportURLCell.propTypes = {
 function getViewInBrowserActionCellForCourse(courseId) {
   function ViewInBrowserActionCell({ row }) {
     return (
-      <Link to={`/instructor-reports/${courseId}/report/?reportName=${encodeURI(row.values.name)}`}>
+      <Link to={`/instructor-reports/${courseId}/report/?reportName=${encodeURIComponent(row.values.name)}`}>
         <FormattedMessage id="report-browser.report-list.table-column-action.view" defaultMessage="View" />
       </Link>
     );
